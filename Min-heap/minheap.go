@@ -1,8 +1,7 @@
-package main
+package MinHeap
 
 import (
 	"errors"
-	"fmt"
 )
 
 type MinHeap struct {
@@ -69,19 +68,4 @@ func (h *MinHeap) Pop() (int, error) {
 	}
 
 	return result, nil
-}
-
-func main() {
-	h := NewMinHeap()
-
-	h.Push(5)
-	h.Push(2)
-	h.Push(8)
-	h.Push(1)
-	h.Push(3)
-
-	for h.Len() > 0 {
-		x, _ := h.Pop()
-		fmt.Println(x)
-	}
 }
